@@ -16,24 +16,32 @@ function displayYear() {
 displayYear();
 
 // client section owl carousel
-$(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 15,
-    navText: [],
-    center: true,
-    dots: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    navText: ['<span class="fa fa-arrow-left "></span>', '<span class="fa fa-arrow-right"></span>'],
-    responsive: {
-        0: {
-            items: 1
-        },
-        1000: {
-            items: 3
+$(document).ready(function() {
+    var $carousel = $(".owl-carousel");
+
+    // Vérifier le nombre d'éléments dans le carrousel
+    var itemCount = $carousel.find('.item').length;
+
+    $carousel.owlCarousel({
+        loop: itemCount > 1,  // Désactive la boucle si un seul item
+        margin: 15,
+        navText: [],
+        center: itemCount === 1,  // Centre l'item si un seul
+        dots: false,
+        autoplay: itemCount > 1,  // Désactive l'autoplay si un seul item
+        autoplayHoverPause: true,
+        navText: ['<span class="fa fa-arrow-left "></span>', '<span class="fa fa-arrow-right"></span>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: Math.min(itemCount, 3) // Définit le nombre d'items max selon le nombre disponible
+            }
         }
-    }
+    });
 });
+
 
 /** google_map js **/
 

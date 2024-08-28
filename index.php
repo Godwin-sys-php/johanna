@@ -330,6 +330,57 @@
       </div>
     </section>
 
+    <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          NOS DERNIERS ARTICLES
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel">
+          <?php
+          $file_path = '../admin/articles/list.json';
+
+          // Vérifier si le fichier JSON existe
+          if (file_exists($file_path)) {
+              // Lire le contenu actuel du fichier JSON
+              $json = file_get_contents($file_path);
+
+              // Décoder le JSON en tableau PHP
+              $data = json_decode($json, true);
+
+              // Vérifier si le JSON a été correctement décodé
+              if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+                  die('Erreur lors du décodage du JSON.');
+              }
+
+              // Afficher les articles
+              foreach ($data as $item) {
+                  // add link to article (a bracket)
+                  
+                  echo '<a href="article.php?id=' . $item['id'] . '">';
+                  echo '<div class="item">';
+                  echo '<div class="box">';
+                  echo '<div class="detail-box" style="background-color: white !important;color: #4c7e81 !important;border: solid 1px #4c7e81">';
+                  echo '<h5>';
+                  echo $item['title'];
+                  echo '</h5>';
+                  echo '<p>';
+                  echo $item['description'];
+                  echo '</p>';
+                  echo '</div>';
+                  echo '</div>';
+                  echo '</div>';
+                  echo '</a>';
+              }
+          }
+          ?>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- end service section -->
 
     <!-- info section -->

@@ -330,14 +330,15 @@
       </div>
     </section>
 
+    <img src="./images/organigramme.png" style="width: 100vw;">
+
     <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
           NOS DERNIERS ARTICLES
         </h2>
-      </div>
-      <div class="carousel-wrap ">
+      </div><div class="carousel-wrap ">
         <div class="owl-carousel">
           <?php
           $file_path = '../admin/articles/list.json';
@@ -385,6 +386,43 @@
 
     <!-- info section -->
 
+    <section class="client_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                JOHANNA BUSINESS EN IMAGE
+            </h2>
+        </div>
+        <div class="carousel-wrap">
+            <div class="owl-carousel">
+                <?php
+                $directory = 'images/show'; // Chemin vers le répertoire des images
+
+                // Vérifier si le répertoire existe
+                if (is_dir($directory)) {
+                    // Scanner le répertoire pour récupérer les fichiers
+                    $images = glob($directory . '/*.jpeg'); // Récupérer uniquement les fichiers JPEG
+
+                    // Parcourir les images et générer les éléments du carousel
+                    foreach ($images as $image) {
+                        // Générer l'URL de l'image pour l'affichage
+                        $imagePath = $image;
+                        echo '<div class="item">';
+                        echo '<div class="box">';
+                        echo '<img src="' . $imagePath . '" alt="Article Image" style="width: 100%; height: auto; border: solid 1px #4c7e81;">';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo '<p>Aucune image trouvée dans le répertoire.</p>';
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <section class="info_section layout_padding2">
       <div class="container">
         <!-- <div class="social_container">
@@ -413,7 +451,7 @@
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
               </div>
               <div class="detail-box">
-                <p>Kabare, Sud-Kivu, République Démocratique du Congo</p>
+                <p>364 Groupement de MUDAKA, Territoire de Kabare/Sud-Kivu, République Démocratique du Congo</p>
               </div>
             </div>
           </a>
@@ -423,7 +461,7 @@
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </div>
               <div class="detail-box">
-                <p>+243 813 764 827</p>
+                <p>+243 835 478 863 / +243992555356</p>
               </div>
             </div>
           </a>
@@ -433,7 +471,7 @@
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
               <div class="detail-box">
-                <p>directeur.general@johannabusiness.com</p>
+                <p>johanahouse275@gmail.com / directeur.general@johannabusiness.com</p>
               </div>
             </div>
           </a>

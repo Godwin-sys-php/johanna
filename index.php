@@ -30,6 +30,67 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <style>
+      #team_section {
+    padding: 50px 0;
+}
+
+#team_section .heading_container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#team_section .heading_container h4 {
+    text-align: center;
+}
+
+#team_section .team_member {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#team_section .img-box {
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#team_section .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#team_section .detail-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+#team_section .detail-box h6 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#team_section .detail-box p {
+    font-size: 12px;
+    color: #777;
+}
+
+    </style>
   </head>
 
   <body>
@@ -99,6 +160,7 @@
       </section>
       <!-- end slider section -->
     </div>
+   
 
     <!-- about section -->
 
@@ -331,6 +393,74 @@
     </section>
 
     <img src="./images/organigramme.png" style="width: 100vw;">
+    <div style="display: flex;justify-content:center;"><img src="./images/chips.jpeg" style="width: 50vw;align-self: center;"></div>
+
+    <section id="team_section" class="layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>NOTRE ÉQUIPE</h2>
+            <p>RECONTREZ LES ACTEURS CLÉS DE JOHANNA BUSINESS ET ENTREPRENARIAT DE JEUNES.</p>
+        </div>
+        <div class="row">
+            <!-- Bah Ibrahim -->
+            <div class="col-md-3 col-sm-6">
+                <div class="team_member">
+                    <div class="img-box">
+                        <img src="images/team/bah_ibrahim.jpg" alt="Bah Ibrahim">
+                    </div>
+                    <div class="detail-box">
+                        <h4>Bah Ibrahim</h4>
+                        <h6>Directeur Général</h6>
+                        <p>De nationalité malienne, expert en administration et finance ayant travaillé au Mali et en RCA. Il dispose également d’un diplôme en pisciculture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paulin Maheshe -->
+            <div class="col-md-3 col-sm-6">
+                <div class="team_member">
+                    <div class="img-box">
+                        <img src="images/team/paulin_maheshe.jpg" alt="Paulin Maheshe">
+                    </div>
+                    <div class="detail-box">
+                        <h4>Paulin Maheshe</h4>
+                        <h6>Directeur Administratif/Finances</h6>
+                        <p>De nationalité congolaise disposant de plus de 10 ans dans la gestion des finances dans une entreprise au Sud-Kivu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathieu Debo -->
+            <div class="col-md-3 col-sm-6">
+                <div class="team_member">
+                    <div class="img-box">
+                        <img src="images/team/mathieu_debo.jpg" alt="Mathieu Debo">
+                    </div>
+                    <div class="detail-box">
+                        <h4>Mathieu Debo</h4>
+                        <h6>Directeur de Production</h6>
+                        <p>Expert en pisciculture dans la région du Sahel, ayant travaillé au Mali, Nigeria, Uganda et Guinée. Mathieu est de nationalité Béninoise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stevie Ruharura -->
+            <div class="col-md-3 col-sm-6">
+                <div class="team_member">
+                    <div class="img-box">
+                        <img src="images/team/stevie_ruharura.jpg" alt="Stevie Ruharura">
+                    </div>
+                    <div class="detail-box">
+                        <h4>Stevie Ruharura</h4>
+                        <h6>Manager Logistique et Sécurité</h6>
+                        <p>De nationalité congolaise, expert en sécurité avec un Master en Criminologie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <section class="client_section layout_padding">
     <div class="container">

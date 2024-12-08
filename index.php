@@ -391,9 +391,7 @@
         </div>
       </div>
     </section>
-
-    <img src="./images/organigramme.png" style="width: 100vw;">
-    <div style="display: flex;justify-content:center;"><img src="./images/chips.jpeg" style="width: 50vw;align-self: center;"></div>
+    
 
     <section id="team_section" class="layout_padding">
     <div class="container">
